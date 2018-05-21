@@ -4,7 +4,7 @@ class Url < ActiveRecord::Base
 
   validate do |url|
     if !(url.original).match(URI::regexp(%w(http https)))
-      errors.add(:url, "The url you have enter is invalid. Please enter for example http://example.com")
+      errors.add(:url, "The url you have entered is invalid. Please re-enter with the same format as http://example.com")
     end
   end
 
